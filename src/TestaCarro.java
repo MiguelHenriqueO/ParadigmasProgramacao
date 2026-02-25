@@ -1,6 +1,19 @@
+import javax.swing.*;
+
 public class TestaCarro {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+
+        String marca = JOptionPane.showInputDialog(null, "Marca do carro: ");
+        String modelo = JOptionPane.showInputDialog(null, "Modelo do carro: ");
+        float velocidade = Float.parseFloat(JOptionPane.showInputDialog(null, "Velocidade do carro: "));
+        boolean motor = Boolean.parseBoolean(JOptionPane.showInputDialog(null, "Motor ligado: "));
+
+        Carro carro = new Carro(marca, modelo, velocidade, motor);
+        carro.mostrarModelo();
+
+
+
+        /*System.out.println("Hello World");
 
 
         // instanciar objeto obj1
@@ -17,7 +30,7 @@ public class TestaCarro {
         obj2.modelo = "Onix";
         obj2.velocidade = 0;
         obj2.motor = false;
-        System.out.println(obj2.toString());
+        System.out.println(obj2.toString());*/
 
     }
 }
